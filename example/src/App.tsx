@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { CustomSelector, Selector } from 'react-native-custom-selected-ex';
+import { Selector } from 'react-native-custom-selected-ex';
 
 export default function App() {
   const [yearSelected, setYearSelected] = useState<number>(2020);
