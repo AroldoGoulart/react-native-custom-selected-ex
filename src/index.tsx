@@ -18,7 +18,7 @@ interface ISelectorProps {
 
 interface ICustomSelectorProps {
   onChange: (value: { value: string; id: number }) => void;
-  selectedValue: number;
+  selectedValue: { value: string; id: number };
   stylePicker?: ViewStyle;
   styleView?: ViewStyle;
   placeholder?: string;
