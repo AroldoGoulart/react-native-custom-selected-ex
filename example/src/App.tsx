@@ -26,25 +26,3 @@ export default function App() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  pickerS: {
-    width: `100%`,
-    borderColor: 'gray',
-  },
-  text: {
-    fontSize: 24,
-  },
-  picker: {
-    marginVertical: 30,
-    width: 300,
-    padding: 10,
-    borderWidth: 1,
-    borderColor: '#666',
-  },
-});
