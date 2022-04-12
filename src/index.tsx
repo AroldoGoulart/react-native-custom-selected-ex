@@ -1,6 +1,7 @@
 import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
-import { StyleSheet, View, ViewStyle } from 'react-native';
+import { Platform, StyleSheet, View, ViewStyle } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+import ModalSelector, { ModalSelectorProps } from 'react-native-modal-selector';
 
 interface ISelectorProps {
   minYear: number;
@@ -14,6 +15,10 @@ interface ISelectorProps {
   fullArray?: any[];
   transparentPickIcon?: boolean;
   iconChildren?: () => ReactNode;
+  cancelText?: string;
+  placeHolder?: string;
+  pickerOptionsIos?: ModalSelectorProps;
+  forceIOSModal?: boolean;
 }
 
 interface ICustomSelectorProps {
@@ -29,6 +34,10 @@ interface ICustomSelectorProps {
   }[];
   transparentPickIcon?: boolean;
   iconChildren?: () => ReactNode;
+  cancelText?: string;
+  placeHolder?: string;
+  pickerOptionsIos?: ModalSelectorProps;
+  forceIOSModal?: boolean;
 }
 
 export function Selector(props: ISelectorProps): ReactElement {
@@ -44,6 +53,10 @@ export function Selector(props: ISelectorProps): ReactElement {
     transparentPickIcon = false,
     iconChildren,
     styleView = {},
+    cancelText = 'Cancel',
+    placeHolder = 'Select a item',
+    pickerOptionsIos,
+    forceIOSModal = false,
   } = props;
 
   const [arrayOption, setArrayOptions] = useState<number[] | string[]>([]);
@@ -64,6 +77,39 @@ export function Selector(props: ISelectorProps): ReactElement {
     //@ts-ignore
     setArrayOptions(generateBetweenYears(minYear, maxYear));
   }, [minYear, maxYear, fullArray]);
+
+  if (Platform.OS === 'ios' || forceIOSModal) {
+    let data_picker = [];
+
+    if (fullArray && fullArray.length > 0) {
+      data_picker = fullArray.map((item) => {
+        return {
+          key: item,
+          label: item,
+        };
+      });
+    } else {
+      data_picker = generateBetweenYears(minYear, maxYear).map((item) => {
+        return {
+          key: item,
+          label: item,
+        };
+      });
+    }
+
+    return (
+      //@ts-ignore
+      <ModalSelector
+        {...pickerOptionsIos}
+        //@ts-ignore
+        data={data_picker}
+        cancelText={cancelText}
+        initValue={placeHolder}
+        onChange={onChange}
+        style={[styles.pickerIos, stylePicker]}
+      />
+    );
+  }
 
   return (
     //@ts-ignore
@@ -113,7 +159,37 @@ export function CustomSelector(props: ICustomSelectorProps): ReactElement {
     transparentPickIcon = false,
     iconChildren,
     styleView = {},
+    pickerOptionsIos,
+    placeHolder = 'Select a item',
+    cancelText = 'Cancel',
+    forceIOSModal = false,
   } = props;
+
+  if (Platform.OS === 'ios' || forceIOSModal) {
+    let data_picker = [] as unknown as { key: any; label: any }[];
+
+    if (fullArray && fullArray.length > 0) {
+      data_picker = fullArray.map((item) => {
+        return {
+          key: item.id,
+          label: item.value,
+        };
+      });
+    }
+
+    return (
+      //@ts-ignore
+      <ModalSelector
+        {...pickerOptionsIos}
+        //@ts-ignore
+        data={data_picker}
+        cancelText={cancelText}
+        initValue={placeHolder}
+        onChange={onChange}
+        style={[styles.pickerIos, stylePicker]}
+      />
+    );
+  }
 
   return (
     //@ts-ignore
@@ -153,6 +229,9 @@ export function CustomSelector(props: ICustomSelectorProps): ReactElement {
 }
 
 const styles = StyleSheet.create({
+  pickerIos: {
+    width: '100%',
+  },
   picker: {
     marginVertical: 30,
     width: 300,

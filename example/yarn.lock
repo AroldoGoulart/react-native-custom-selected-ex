@@ -1373,9 +1373,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001317:
-  version "1.0.30001327"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001327.tgz#c1546d7d7bb66506f0ccdad6a7d07fc6d668c858"
-  integrity sha512-1/Cg4jlD9qjZzhbzkzEaAC2JHsP0WrOc8Rd/3a3LuajGzGWR/hD7TVyvq99VqmTy99eVh8Zkmdq213OgvgXx7w==
+  version "1.0.30001328"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001328.tgz#0ed7a2ca65ec45872c613630201644237ba1e329"
+  integrity sha512-Ue55jHkR/s4r00FLNiX+hGMMuwml/QGqqzVeMQ5thUewznU2EdULFvI3JR7JJid6OrjJNfFvHY2G2dIjmRaDDQ==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -1733,9 +1733,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.4.84:
-  version "1.4.106"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.106.tgz#e7a3bfa9d745dd9b9e597616cb17283cc349781a"
-  integrity sha512-ZYfpVLULm67K7CaaGP7DmjyeMY4naxsbTy+syVVxT6QHI1Ww8XbJjmr9fDckrhq44WzCrcC5kH3zGpdusxwwqg==
+  version "1.4.107"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.107.tgz#564257014ab14033b4403a309c813123c58a3fb9"
+  integrity sha512-Huen6taaVrUrSy8o7mGStByba8PfOWWluHNxSHGBrCgEdFVLtvdQDBr9LBCF9Uci8SYxh28QNNMO0oC17wbGAg==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -3167,9 +3167,9 @@ node-int64@^0.4.0:
   integrity sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=
 
 node-releases@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.2.tgz#7139fe71e2f4f11b47d4d2986aaf8c48699e0c01"
-  integrity sha512-XxYDdcQ6eKqp/YjI+tb2C5WM2LgjnZrfYg4vgQt49EK268b6gYCHsBLrK2qvJo4FmCtqmKezb0WZFK4fkrZNsg==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.3.tgz#225ee7488e4a5e636da8da52854844f9d716ca96"
+  integrity sha512-maHFz6OLqYxz+VQyCAtA3PTX4UP/53pa05fyDNc9CwjvJ0yEh6+xBwKsgCxMNhS8taUKBFYxfuiaD9U/55iFaw==
 
 node-stream-zip@^1.9.1:
   version "1.15.0"
@@ -3476,7 +3476,7 @@ promise@^8.0.3:
   dependencies:
     asap "~2.0.6"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -3515,6 +3515,18 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.8.4:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-native-modal-picker@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/react-native-modal-picker/-/react-native-modal-picker-0.0.16.tgz#c9324d880a3bb8f36b772f378164977e2f431cbc"
+  integrity sha1-yTJNiAo7uPNrdy83gWSXfi9DHLw=
+
+react-native-modal-selector@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-modal-selector/-/react-native-modal-selector-2.1.0.tgz#eb4e38254af8a54d6ab5244533e15ee91f132e26"
+  integrity sha512-aXOF8tC69XXfI6kbIskRRLe8xcexiYc21GD0s8gNz/Pl1FT8921PuLz647uY2le+fsJsztX6Taaf3mij/Noc+A==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-native@0.63.4:
   version "0.63.4"
